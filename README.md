@@ -247,7 +247,7 @@ In [the cyclonus.yaml file](./deploy/krew/cyclonus.yaml):
         2. run a `krew install` against the downloaded binary
 
             ```
-            kubectl krew install --manifest=./deploy/krew/cyclonus.yaml --archive=/Users/mfenwick/Downloads/cyclonus_darwin_amd64.tar.gz
+            kubectl krew install --manifest=./deploy/krew/cyclonus.yaml --archive=/Users/mfenwick/Downloads/kubectl-cyclonus_darwin_amd64.tar.gz
             ```
 
 2. test it
