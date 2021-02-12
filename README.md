@@ -229,10 +229,10 @@ export GITHUB_TOKEN=...
 goreleaser
 ```
 
-In [the plugin.yaml file](./deploy/krew/plugin.yaml):
- - manually update the sha256's using [the checksums file](https://github.com/mattfenwick/krew-cyclonus/releases/download/v0.1.0/cyclonus_0.0.3_checksums.txt)
+In [the cyclonus.yaml file](./deploy/krew/cyclonus.yaml):
+ - manually update the sha256's using [the checksums file](https://github.com/mattfenwick/krew-cyclonus/releases/download/v0.0.1/cyclonus_0.0.1_checksums.txt)
    - **TODO** is there a better way to do this?
- - manually update the versions using [the checksums file](https://github.com/mattfenwick/krew-cyclonus/releases/download/v0.1.0/cyclonus_0.0.3_checksums.txt)
+ - manually update the versions using [the checksums file](https://github.com/mattfenwick/krew-cyclonus/releases/download/v0.0.1/cyclonus_0.0.1_checksums.txt)
    - **TODO** is there a better way to do this?
 
 # How to test a local krew release
