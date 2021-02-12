@@ -226,7 +226,7 @@ git push --tags
 
 export GITHUB_TOKEN=...
 
-goreleaser
+goreleaser release --rm-dist
 ```
 
 In [the cyclonus.yaml file](./deploy/krew/cyclonus.yaml):
