@@ -1,6 +1,6 @@
 # kubectl cyclonus
 
-A `kubectl` plugin to work with network policies.
+A `kubectl` plugin to work with network policies.  This plugin is based on [the cyclonus tool](https://github.com/mattfenwick/cyclonus), which provides the underlying functionality.
  
 
 ## Install a few network policies in your cluster
