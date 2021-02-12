@@ -10,7 +10,7 @@ spec:
         os: linux
         arch: amd64
     uri: https://github.com/mattfenwick/kubectl-cyclonus/releases/download/v0.0.1/kubectl-cyclonus_linux_amd64.tar.gz
-    sha256: "7a3f738ce77e257f344fb828ed148ab7edfe4afa44ca91cb525f8fdc0a133d68"
+    sha256: "77eab0286935fc27b10a6db13bc29959e116371fbcb1f5e7d6e6aab1ea9e34c7"
     files:
     - from: "./kubectl-cyclonus"
       to: "cyclonus"
@@ -22,7 +22,7 @@ spec:
         os: darwin
         arch: amd64
     uri: https://github.com/mattfenwick/kubectl-cyclonus/releases/download/v0.0.1/kubectl-cyclonus_darwin_amd64.tar.gz
-    sha256: "e3bbb8ab0483985e59191ddfc0c299c4782dd88950b5fbc49ad9609af954434a"
+    sha256: "73cf532ee32873b13b82430d4fbdd579007a5770f8c4fe46b929313bcddd579b"
     files:
     - from: "./kubectl-cyclonus"
       to: "cyclonus"
@@ -34,7 +34,7 @@ spec:
         os: windows
         arch: amd64
     uri: https://github.com/mattfenwick/kubectl-cyclonus/releases/download/v0.0.1/kubectl-cyclonus_windows_amd64.zip
-    sha256: "961b21636dee060755f28b82eb9524194ae53e148144b050c27c656f9dbcc51e"
+    sha256: "9ff97f71be0dd6ec86b8cf9cd08c571843762e4ad9d0b692c207cac299882ce5"
     files:
     - from: "/kubectl-cyclonus.exe"
       to: "cyclonus.exe"
