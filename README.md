@@ -3,14 +3,31 @@
 A `kubectl` plugin to work with network policies.
  
 
+## Install a few network policies in your cluster
+
+If you don't have any network policies installed on your cluster, here's a few examples to get started:
+
+```shell
+$ kubectl create -f networkpolicies/simple-example
+
+$ kubectl get netpol -A
+  NAMESPACE   NAME                        POD-SELECTOR   AGE
+  y           allow-all-egress-by-label   pod in (a,b)   96s
+  y           allow-all-for-label         pod=b          96s
+  y           allow-by-ip                 pod=c          96s
+  y           allow-label-to-label        pod=a          96s
+  y           deny-all                    <none>         96s
+  y           deny-all-egress             <none>         96s
+  y           deny-all-for-label          pod=a          96s
+```
+
 ## Explain policies
 
 Groups policies by target, divides rules into egress and ingress, and gives a basic explanation of the combined
 policies.  This clarifies the interactions between "denies" and "allows" from multiple policies.
 
 ```
-$ kubectl cyclonus \
-  --policy-path ./networkpolicies/simple-example/
+$ kubectl cyclonus
 
 +---------+---------------+------------------------+---------------------+--------------------------+
 |  TYPE   |    TARGET     |      SOURCE RULES      |        PEER         |      PORT/PROTOCOL       |
@@ -52,7 +69,6 @@ to a pod.
 ```
 $ kubectl cyclonus \
   --explain=false \
-  --policy-path ./networkpolicies/simple-example/ \
   --target-pod-path ./examples/targets.json
 
 Combined rules for pod {Namespace:y Labels:map[pod:a]}:
@@ -84,7 +100,6 @@ this command parses network policies and determines if the traffic is allowed or
 ```
 $ kubectl cyclonus \
   --explain=false \
-  --policy-path ./networkpolicies/simple-example/ \
   --traffic-path ./examples/traffic.json
 
 Traffic:
@@ -123,7 +138,6 @@ Runs a simulated connectivity probe against a set of network policies, without u
 ```
 $ kubectl cyclonus \
   --explain=false \
-  --policy-path ./networkpolicies/simple-example/ \
   --probe-path ./examples/probe.json
 
 Combined:
@@ -149,8 +163,7 @@ Checks network policies for common problems.
 ```
 $ kubectl cyclonus \
   --explain=false \
-  --lint=true \
-  --policy-path ./networkpolicies/simple-example
+  --lint=true
 
 +-----------------+------------------------------+-------------------+-----------------------------+
 | SOURCE/RESOLVED |             TYPE             |      TARGET       |       SOURCE POLICIES       |
