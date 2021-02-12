@@ -2,7 +2,7 @@ project_name: kubectl-cyclonus
 release:
   github:
     owner: mattfenwick
-    name: krew-cyclonus
+    name: kubectl-cyclonus
 builds:
   - id: kubectl-cyclonus
     goos:
