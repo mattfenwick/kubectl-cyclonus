@@ -41,15 +41,13 @@ spec:
     - from: LICENSE
       to: "."
     bin: "cyclonus.exe"
-  shortDescription: Analysis tools for network policies.
+  shortDescription: NetworkPolicy analysis tool suite
   homepage: https://github.com/mattfenwick/kubectl-cyclonus
-  caveats: |
-    Usage:
-      $ kubectl cyclonus
-
-    For additional options:
-      $ kubectl cyclonus --help
-      or https://github.com/mattfenwick/kubectl-cyclonus/blob/v0.0.1/doc/USAGE.md
-
   description: |
-    This plugin provides a suite of tools for working with network policies.
+    This plugin provides a suite of tools for working with network policies, including:
+    - linting to detect common problems
+    - target- and pod-based resolution of policies, to understand how policies work in practice
+      and override each other
+    - simulation of traffic allow/deny based on application of policies to source and destination
+      pod and namespace labels and IP addresses
+
