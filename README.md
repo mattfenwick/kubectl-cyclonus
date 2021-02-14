@@ -230,9 +230,9 @@ goreleaser release --rm-dist
 ```
 
 In [the cyclonus.yaml file](./deploy/krew/cyclonus.yaml):
- - manually update the sha256's using [the checksums file](https://github.com/mattfenwick/kubectl-cyclonus/releases/download/v0.0.1/kubectl-cyclonus_0.0.1_checksums.txt)
+ - manually update the sha256's using [the checksums file](https://github.com/mattfenwick/kubectl-cyclonus/releases/download/v0.0.2/kubectl-cyclonus_0.0.2_checksums.txt)
    - **TODO** is there a better way to do this?
- - manually update the versions using [the checksums file](https://github.com/mattfenwick/kubectl-cyclonus/releases/download/v0.0.1/kubectl-cyclonus_0.0.1_checksums.txt)
+ - manually update the versions using [the checksums file](https://github.com/mattfenwick/kubectl-cyclonus/releases/download/v0.0.2/kubectl-cyclonus_0.0.2_checksums.txt)
    - **TODO** is there a better way to do this?
 
 # How to test a local krew release
@@ -242,7 +242,7 @@ In [the cyclonus.yaml file](./deploy/krew/cyclonus.yaml):
      - easy way: `kubectl krew install --manifest=./deploy/krew/cyclonus.yaml`
 
      - hard way:
-        1. download a binary from [the github project release page](https://github.com/mattfenwick/kubectl-cyclonus/releases/tag/v0.0.1)
+        1. download a binary from [the github project release page](https://github.com/mattfenwick/kubectl-cyclonus/releases/tag/v0.0.2)
 
         2. run a `krew install` against the downloaded binary
 
