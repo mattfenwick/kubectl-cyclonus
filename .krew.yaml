@@ -3,25 +3,40 @@ kind: Plugin
 metadata:
   name: cyclonus
 spec:
-  version: {{ .TagName }}
+  version: "{{ .TagName }}"
   platforms:
+  - selector:
+      matchLabels:
+        os: linux
+        arch: amd64
+    {{addURIAndSha "https://github.com/mattfenwick/kubectl-cyclonus/releases/download/{{ .TagName }}/kubectl-cyclonus_linux_amd64.tar.gz" .TagName }}
+    files:
+    - from: "./kubectl-cyclonus"
+      to: "cyclonus"
+    - from: LICENSE
+      to: "."
+    bin: "cyclonus"
   - selector:
       matchLabels:
         os: darwin
         arch: amd64
     {{addURIAndSha "https://github.com/mattfenwick/kubectl-cyclonus/releases/download/{{ .TagName }}/kubectl-cyclonus_darwin_amd64.tar.gz" .TagName }}
-    bin: cyclonus
-  - selector:
-      matchLabels:
-        os: linux
-        arch: amd64
-    {{addURIAndSha "https://github.com/mattfenwick/kubectl-cyclonus/releases/download/{{ .TagName }}/kubectl-cylonus_linux_amd64.tar.gz" .TagName }}
-    bin: cyclonus
+    files:
+    - from: "./kubectl-cyclonus"
+      to: "cyclonus"
+    - from: LICENSE
+      to: "."
+    bin: "cyclonus"
   - selector:
       matchLabels:
         os: windows
         arch: amd64
-    {{addURIAndSha "https://github.com/mattfenwick/kubectl-cyclonus/releases/download/{{ .TagName }}/kubectl-cylonus_windows_amd64.tar.gz" .TagName }}
+    {{addURIAndSha "https://github.com/mattfenwick/kubectl-cyclonus/releases/download/{{ .TagName }}/kubectl-cyclonus_windows_amd64.zip" .TagName }}
+    files:
+    - from: "/kubectl-cyclonus.exe"
+      to: "cyclonus.exe"
+    - from: LICENSE
+      to: "."
     bin: "cyclonus.exe"
   shortDescription: NetworkPolicy analysis tool suite
   homepage: https://github.com/mattfenwick/kubectl-cyclonus
@@ -32,3 +47,4 @@ spec:
       and override each other
     - simulation of traffic allow/deny based on application of policies to source and destination
       pod and namespace labels and IP addresses
+
