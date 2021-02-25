@@ -1,7 +1,17 @@
 # kubectl cyclonus
 
 A `kubectl` plugin to work with network policies.  This plugin is based on [the cyclonus tool](https://github.com/mattfenwick/cyclonus), which provides the underlying functionality.
- 
+
+
+## Quick Start
+
+Make sure you have krew installed; then:
+
+```
+kubectl krew install cyclonus
+
+kubectl cyclonus -h
+```
 
 ## Install a few network policies in your cluster
 
@@ -193,47 +203,9 @@ $ kubectl cyclonus \
 +-----------------+------------------------------+-------------------+-----------------------------+
 ```
 
-
-## Quick Start
-
-1. Download the [latest binary for your OS](https://github.com/mattfenwick/kubectl-cyclonus/releases)
-
-2. unzip the archive
-
-3. move the executable somewhere in your path
-
-    ```bash
-    # OS X example;  will be different on other OSs
-    mv ~/Downloads/kubectl-cyclonus_darwin_amd64/kubectl-cyclonus /usr/local/bin
-    ```
-
-4. run it!
-
-    ```
-    kubectl cyclonus -h
-    ```
-
 # How to release
 
-See https://goreleaser.com/quick-start/
-
-Set up a github token and run:
-
-```
-VERSION=v9.9.9
-git tag $VERSION -m "something about the version"
-git push --tags
-
-export GITHUB_TOKEN=...
-
-goreleaser release --rm-dist
-```
-
-In [the cyclonus.yaml file](./deploy/krew/cyclonus.yaml):
- - manually update the sha256's using [the checksums file](https://github.com/mattfenwick/kubectl-cyclonus/releases/download/v0.0.2/kubectl-cyclonus_0.0.2_checksums.txt)
-   - **TODO** is there a better way to do this?
- - manually update the versions using [the checksums file](https://github.com/mattfenwick/kubectl-cyclonus/releases/download/v0.0.2/kubectl-cyclonus_0.0.2_checksums.txt)
-   - **TODO** is there a better way to do this?
+This uses krew automation; just push a new tag and wait for [the goreleaser action](https://github.com/mattfenwick/kubectl-cyclonus/actions) to run.
 
 # How to test a local krew release
 
@@ -242,7 +214,7 @@ In [the cyclonus.yaml file](./deploy/krew/cyclonus.yaml):
      - easy way: `kubectl krew install --manifest=./deploy/krew/cyclonus.yaml`
 
      - hard way:
-        1. download a binary from [the github project release page](https://github.com/mattfenwick/kubectl-cyclonus/releases/tag/v0.0.2)
+        1. download a binary from [the github project release page](https://github.com/mattfenwick/kubectl-cyclonus/releases)
 
         2. run a `krew install` against the downloaded binary
 
