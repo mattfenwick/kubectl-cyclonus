@@ -37,7 +37,7 @@ Groups policies by target, divides rules into egress and ingress, and gives a ba
 policies.  This clarifies the interactions between "denies" and "allows" from multiple policies.
 
 ```
-$ kubectl cyclonus
+$ kubectl cyclonus --mode explain -A
 
 +---------+---------------+------------------------+---------------------+--------------------------+
 |  TYPE   |    TARGET     |      SOURCE RULES      |        PEER         |      PORT/PROTOCOL       |
@@ -78,7 +78,7 @@ to a pod.
 
 ```
 $ kubectl cyclonus \
-  --explain=false \
+  --mode query-target \
   --target-pod-path ./examples/targets.json
 
 Combined rules for pod {Namespace:y Labels:map[pod:a]}:
@@ -109,7 +109,7 @@ this command parses network policies and determines if the traffic is allowed or
 
 ```
 $ kubectl cyclonus \
-  --explain=false \
+  --mode query-traffic \
   --traffic-path ./examples/traffic.json
 
 Traffic:
@@ -147,7 +147,7 @@ Runs a simulated connectivity probe against a set of network policies, without u
 
 ```
 $ kubectl cyclonus \
-  --explain=false \
+  --mode probe \
   --probe-path ./examples/probe.json
 
 Combined:
@@ -172,7 +172,7 @@ Checks network policies for common problems.
 
 ```
 $ kubectl cyclonus \
-  --explain=false \
+  --mode lint \
   --lint=true
 
 +-----------------+------------------------------+-------------------+-----------------------------+
