@@ -29,6 +29,17 @@ spec:
     bin: "cyclonus"
   - selector:
       matchLabels:
+        os: darwin
+        arch: arm64
+    {{addURIAndSha "https://github.com/mattfenwick/kubectl-cyclonus/releases/download/{{ .TagName }}/kubectl-cyclonus_darwin_arm64.tar.gz" .TagName }}
+    files:
+    - from: "./kubectl-cyclonus"
+      to: "cyclonus"
+    - from: LICENSE
+      to: "."
+    bin: "cyclonus"
+  - selector:
+      matchLabels:
         os: windows
         arch: amd64
     {{addURIAndSha "https://github.com/mattfenwick/kubectl-cyclonus/releases/download/{{ .TagName }}/kubectl-cyclonus_windows_amd64.zip" .TagName }}

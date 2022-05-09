@@ -3,6 +3,7 @@ release:
   github:
     owner: mattfenwick
     name: kubectl-cyclonus
+  prerelease: auto
 builds:
   - id: kubectl-cyclonus
     goos:
@@ -12,6 +13,7 @@ builds:
     goarch:
     - amd64
     - "386"
+    - arm64
     env:
       - CGO_ENABLED=0
       - GO111MODULE=on
