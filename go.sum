@@ -68,8 +68,8 @@ github.com/mailru/easyjson v0.7.7 h1:UGYAvKxe3sBsEDzO8ZeWOSlIQfWFlxbzLZe7hwFURr0
 github.com/mailru/easyjson v0.7.7/go.mod h1:xzfreul335JAWq5oZzymOObrkdz5UnU4kGfJJLY9Nlc=
 github.com/mattfenwick/collections v0.2.5 h1:oV5kpWmVxQ7iut22S6vFuroR7vFIKwwJlSEiBRMcA+Y=
 github.com/mattfenwick/collections v0.2.5/go.mod h1:391SG9XXJq5g4xzRHzykEB9dp0X6xVXo4W/VI6kW4yM=
-github.com/mattfenwick/cyclonus v0.5.4 h1:oDjzkIXWAqWzqI11zd/gWmfOSXh57ACW/YW8kNXFVyk=
-github.com/mattfenwick/cyclonus v0.5.4/go.mod h1:NHve6+pfhMGCZ02T0qgnCTN0TEIoc+KWLY+dXczyPTY=
+github.com/mattfenwick/cyclonus v0.5.5 h1:IRjezqOpYhaZuNogt8+0fYocmTkDEK9yzOXckcJSppw=
+github.com/mattfenwick/cyclonus v0.5.5/go.mod h1:NHve6+pfhMGCZ02T0qgnCTN0TEIoc+KWLY+dXczyPTY=
 github.com/mattn/go-colorable v0.1.4 h1:snbPLB8fVfU9iwbbo30TPtbLRzwWu6aJS6Xh4eaaviA=
 github.com/mattn/go-colorable v0.1.4/go.mod h1:U0ppj6V5qS13XJ6of8GYAs25YV2eR4EVcfRqFIhoBtE=
 github.com/mattn/go-isatty v0.0.8/go.mod h1:Iq45c/XA43vh69/j3iqttzPXn0bhXyGjM0Hdxcsrc5s=

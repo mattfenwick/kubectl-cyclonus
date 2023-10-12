@@ -4,7 +4,7 @@ go 1.21
 
 require (
 	github.com/fatih/color v1.9.0
-	github.com/mattfenwick/cyclonus v0.5.4
+	github.com/mattfenwick/cyclonus v0.5.5
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.3
 	k8s.io/client-go v0.28.1
